@@ -1,0 +1,15 @@
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import store from "./redux/store";
+import { Provider } from "react-redux";
+
+const containerDOM = document.querySelector("#app");
+const root = ReactDOM.createRoot(containerDOM);
+root.render(
+  // 应用中，App中，需要 store的组件，Provider会自动传递过去
+  <Provider store={store}>
+    <App/>
+  </Provider>
+);
+
